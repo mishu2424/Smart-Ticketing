@@ -30,7 +30,34 @@
     />
   </head>
   <body class="font-raleway m-0">
-    <header class="w-[90vw] mx-auto">
+    <div id="alert-section" class="fixed z-50 right-2 top-2 hidden">
+      <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div class="font-bold">
+          <span class="font-extrabold">Info alert!</span> You can not book more than 4 tickets.
+        </div>
+      </div>
+    </div>
+    <div id="confirmation-page" class="success-modal-container h-screen flex items-center justify-center hidden">
+      <div class="success-modal w-[700px] h-[450px] flex items-center justify-center bg-gray-100">
+        <div class="main-container flex flex-col items-center justify-center p-5 space-y-4">
+          <img src="./images/success.png" alt="success">
+          <h4 class="text-3xl font-bold text-[#498f3ef0]">Success</h4>
+          <div class="text-center">
+            <h5 class="text-base font-bold">Thank you for Booking Our Bus Seats.</h5>
+            <h5 class="text-base font-bold">We are working hard to find the best service and deals for you. </h5>
+          </div>
+          <p class="text-sm opacity-80 font-thin">Shortly you will find a confirmation in your email.</p>
+          <div>
+            <a id="continue-btn" class="btn px-28 py-2 bg-[#498f3ef0] text-white rounded-full">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="w-[90vw] mx-auto">
       <nav
         class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 dark:border-gray-600"
       >
@@ -54,7 +81,7 @@
               type="button"
               class="text-[#1DD100] bg-[#1DD1004D] border-2 border-[#1DD100] hover:bg-[#1DD100] hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Get started <i class="fas fa-bus-alt"></i>
+              Get Started <i class="fas fa-bus-alt relative left-2"></i>
             </button>
             <button
               data-collapse-toggle="navbar-sticky"
@@ -159,7 +186,7 @@
             <img src="./images/people.png" class="w-16 h-16" alt="people" />
             <div class="card-details">
               <h2 class="text-2xl font-semibold">500K+</h2>
-              <p class="text-sm opacity-80">Registered users</p>
+              <p class="text-sm opacity-80">Registered Users</p>
             </div>
           </div>
           <div
@@ -171,8 +198,8 @@
               alt="people"
             />
             <div class="card-details">
-              <h2 class="text-2xl font-semibold">1.7lacks</h2>
-              <p class="text-sm opacity-80">Tickets sold</p>
+              <h2 class="text-2xl font-semibold">1.7 Lakhs</h2>
+              <p class="text-sm opacity-80">Tickets Sold</p>
             </div>
           </div>
           <div
@@ -181,20 +208,22 @@
             <img src="./images/stoppage.png" class="w-16 h-16" alt="people" />
             <div class="card-details">
               <h2 class="text-2xl font-semibold">80K+</h2>
-              <p class="text-sm opacity-80">Rental partners</p>
+              <p class="text-sm opacity-80">Rental Partners</p>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="mt-10 lg:mt-20">
+    <main id="main" class="mt-10 lg:mt-20">
       <section class="w-[90vw] lg:w-[80vw] mx-auto my-20 lg:mt-40 space-y-10">
         <h2 class="text-xl lg:text-3xl text-center font-bold">
-          Best offers for you
+          Best Offers For You
         </h2>
         <div class="offer-cards grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div
-            class="offer-card flex items-center justify-evenly bg-[#FFBF0F] rounded-xl"
+          <div 
+            data-copy-to-clipboard-target="NEW15"
+            class="relative offer-card flex items-center justify-evenly bg-[#FFBF0F] rounded-xl"
+            onclick="copyToClipboard(this)"
           >
             <div class="offer-details">
               <h3 class="text-2xl font-bold">15% OFF</h3>
@@ -206,9 +235,17 @@
               <h3 class="text-2xl font-bold">NEW15</h3>
               <p class="text-sm opacity-80">Coupon Code</p>
             </div>
-          </div>
+            <div id="copied-container" class="absolute hidden top-[20%] right-20 copied-section chat-bubble p-0 rounded-xl -translate-x-[50%] -translate-y-[50%]">
+              Copied
+            </div>
+              <!-- <div class="chat-bubble">
+                Copied
+              </div> -->
+            </div>
           <div
-            class="offer-card flex items-center justify-evenly bg-[#F78C9C] rounded-xl"
+          data-copy-to-clipboard-target="Couple20"
+            class="relative offer-card flex items-center justify-evenly bg-[#F78C9C] rounded-xl"
+            onclick="copyToClipboard2(this)"
           >
             <div class="offer-details">
               <h3 class="text-2xl font-bold">20% OFF</h3>
@@ -217,8 +254,11 @@
             </div>
             <img src="./images/cupon-devider.png" alt="" srcset="" />
             <div class="coupon bg-[#F78C9C]">
-              <h3 class="text-2xl font-bold">Couple 20</h3>
+              <h3 class="text-2xl font-bold">Couple20</h3>
               <p class="text-sm opacity-80">Coupon Code</p>
+            </div>
+            <div id="copied-container2" class="absolute hidden top-[20%] right-20 copied-section chat-bubble p-0 rounded-xl -translate-x-[50%] -translate-y-[50%]">
+              Copied
             </div>
           </div>
         </div>
@@ -703,7 +743,7 @@
               Select Your Seat
             </h3>
             <div
-              class="price-show-card bg-gray-200 p-3 rounded-lg space-y-10 h-auto py-20"
+              class="price-show-card bg-gray-200 p-3 rounded-lg space-y-5 h-auto py-20"
             >
               <div id="price-details" class="space-y-6 border-b-2 border-gray-300">
                 <div
@@ -711,8 +751,9 @@
                 >
                   <h3 class="text-sm font-bold text-left w-[60px]">Seat <sup id="selected-seats" class="hidden">0</sup></h3>
                   <h3 class="text-sm font-bold text-left w-[60px]">Class</h3>
-                  <h3 class="text-sm font-bold text-left w-[60px]">Price</h3>
+                  <h3 class="text-sm font-bold text-right w-[60px]">Price</h3>
                 </div>
+                <!-- Dynamic part -->
                 <!-- <div
                   class="actual-price flex items-center justify-between w-full hidden"
                 >
@@ -737,18 +778,27 @@
                 class="total-price-details flex items-center justify-between w-full"
               >
                 <h3 class="text-sm font-bold text-left w-[60px]">Total</h3>
-                <h3 class="text-sm font-bold text-left w-[80px]">
+                <h3 class="text-sm font-bold text-right w-[80px] ">
                   BDT <span id="total">0</span>
                 </h3>
               </div>
+              <div
+                class="total-price-details flex items-center justify-between w-full"
+              >
+                <h3 class="text-sm font-bold text-left w-[60px]">Discount</h3>
+                <h3 class="text-sm font-bold text-right w-[120px]"><span id="discountedPrice">0</span>
+                </h3>
+              </div>
 
-              <div class="coupon-field flex bg-white rounded-md">
-                <input
+              <div class="flex bg-white rounded-md" id="coupon-container">
+                <input 
+                  id="coupon-field"
                   type="text"
                   placeholder="Coupon"
                   class="rounded-md input border-none w-full max-w-xs hover:outline-none"
+                  disabled
                 />
-                <a class="btn text-white bg-[#1DD100] px-4 py-2 rounded-md"
+                <a id="coupon-applied-btn" class="btn text-white bg-[#1DD100] px-4 py-2 rounded-md" disabled
                   >Apply</a
                 >
               </div>
@@ -756,7 +806,7 @@
                 class="grand-total-price-details flex items-center justify-between w-full"
               >
                 <h3 class="text-sm font-bold text-left">Grand Total</h3>
-                <h3 class="text-sm font-bold text-left w-[80px]">
+                <h3 class="text-sm font-bold text-right w-[80px]">
                   BDT <span id="grand-total">0</span>
                 </h3>
               </div>
@@ -782,13 +832,13 @@
               <div class="relative z-0 w-full mb-5 group">
                 <div>
                   <label
-                    for="first_name"
+                    for="phone_number"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >Phone Number*</label
                   >
                   <input
-                    type="number"
-                    id="first_name"
+                    type="phone"
+                    id="phone_number"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Enter Your Number"
                     required
@@ -798,13 +848,13 @@
               <div class="relative z-0 w-full mb-5 group">
                 <div>
                   <label
-                    for="first_name"
+                    for="email"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >Email ID</label
                   >
                   <input
                     type="email"
-                    id="first_name"
+                    id="email"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Enter Your Email"
                     required
@@ -812,8 +862,10 @@
                 </div>
               </div>
               <button
+                id="nxtBtn"
                 type="submit"
                 class="btn w-full text-white bg-[#1DD100] hover:text-[#1DD100] hover:bg-white border-2 hover:border-[#1DD100]"
+                disabled
               >
                 Next
               </button>
@@ -823,7 +875,7 @@
       </section>
     </main>
 
-    <footer class="bg-[#030712] dark:bg-gray-900">
+    <footer id="footer" class="bg-[#030712] dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0 space-y-4">
