@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -122,16 +122,24 @@
         </div>
       </nav>
       <div
-        class="banner h-auto w-[90vw] lg:w-[80vw] mx-auto flex items-center justify-center flex-col gap-4 mb-20 bg-[url('./images/banner.png')] bg-center lg:bg-bottom bg-cover bg-no-repeat p-6 py-10 rounded-3xl"
+        class="banner h-auto w-[90vw] lg:w-[80vw] mx-auto flex items-center justify-center flex-col gap-4 mb-20 relative bg-center lg:bg-bottom bg-cover bg-no-repeat p-6 py-10 rounded-[30px]"
+        style="
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.2)
+            ),
+            url('./images/banner.png');
+        "
       >
         <div class="banner-details text-center space-y-6">
           <h3 class="text-2xl lg:text-5xl text-white font-bold">
             End-to-End Travel with <br />
-            <span class="text-[#1DD100]">Barsha Bus</span>
+            <span class="text-[#1DD100]">Barsha Travel</span>
           </h3>
           <h5 class="text-sm lg:text-base opacity-90 text-white">
             Reliable and comfortable bus services to get you where you need to
-            go,<br class="hidden lg:block"/>
+            go,<br class="hidden lg:block" />
             on time, every time.
           </h5>
           <div>
@@ -181,7 +189,9 @@
     </header>
     <main class="mt-10 lg:mt-20">
       <section class="w-[90vw] lg:w-[80vw] mx-auto my-20 lg:mt-40 space-y-10">
-        <h2 class="text-xl lg:text-3xl text-center font-bold">Best offers for you</h2>
+        <h2 class="text-xl lg:text-3xl text-center font-bold">
+          Best offers for you
+        </h2>
         <div class="offer-cards grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div
             class="offer-card flex items-center justify-evenly bg-[#FFBF0F] rounded-xl"
@@ -201,13 +211,13 @@
             class="offer-card flex items-center justify-evenly bg-[#F78C9C] rounded-xl"
           >
             <div class="offer-details">
-              <h3 class="text-2xl font-bold">15% OFF</h3>
+              <h3 class="text-2xl font-bold">20% OFF</h3>
               <h5 class="text-base font-bold">on your next purchase</h5>
               <p class="text-sm opacity-80">use by January 2024</p>
             </div>
             <img src="./images/cupon-devider.png" alt="" srcset="" />
             <div class="coupon bg-[#F78C9C]">
-              <h3 class="text-2xl font-bold">NEW15</h3>
+              <h3 class="text-2xl font-bold">Couple 20</h3>
               <p class="text-sm opacity-80">Coupon Code</p>
             </div>
           </div>
@@ -226,7 +236,7 @@
           <h3 class="text-xl lg:text-4xl font-bold">Barsha Travel</h3>
           <h5 class="text-base opacity-70">
             Explore convenient routes and affordable fares with our top-rated
-            bus service, <br class="hidden lg:block"/>
+            bus service, <br class="hidden lg:block" />
             connecting you to your destinations effortlessly.
           </h5>
         </div>
@@ -240,9 +250,16 @@
               <div
                 class="ticket-header-one flex items-center justify-center space-x-4"
               >
-                <img class="w-10" src="./images/bus-logo.png" alt="bus-logo" srcset="" />
+                <img
+                  class="w-10"
+                  src="./images/bus-logo.png"
+                  alt="bus-logo"
+                  srcset=""
+                />
                 <div class="logo-details space-y-3">
-                  <h4 class="text-xl lg:text-3xl font-bold">Greenline Paribahan</h4>
+                  <h4 class="text-xl lg:text-3xl font-bold">
+                    Greenline Paribahan
+                  </h4>
                   <h5 class="text-sm lg:text-base opacity-70">
                     Coach-009-WEB ! AC_Business
                   </h5>
@@ -251,12 +268,19 @@
               <div>
                 <a
                   class="btn text-[#1DD100] bg-[#1DD10026] border border-[#1DD100] py-2 px-4 flex items-center rounded-md"
-                  ><img class="w-4 lg:w-8" src="./images/seat-green.png" alt="" srcset="" /> 40
-                  Seats left</a
+                  ><img
+                    class="w-4 lg:w-8"
+                    src="./images/seat-green.png"
+                    alt=""
+                    srcset=""
+                  />
+                  <span id="seat-amount">40</span> Seats left</a
                 >
               </div>
             </div>
-            <div class="ticket-infos bg-[#F7F8F8] p-6 lg:p-14 space-y-4 rounded-2xl">
+            <div
+              class="ticket-infos bg-[#F7F8F8] p-6 lg:p-14 space-y-4 rounded-2xl"
+            >
               <div
                 class="route flex items-center justify-between border-b-2 border-dashed py-2"
               >
@@ -274,23 +298,34 @@
               <div class="destinations flex items-center justify-between">
                 <div>
                   <a class="btn lg:px-6 py-2 bg-gray-200 rounded-md"
-                    ><span class="text-xs lg:text-sm">Boarding Point - Laxmipur</span></a
+                    ><span class="text-xs lg:text-sm"
+                      >Boarding Point - Laxmipur</span
+                    ></a
                   >
                 </div>
                 <div>
                   <a class="btn px-6 py-2 bg-gray-200 rounded-md"
-                    ><span class="text-xs lg:text-sm">Dropping Point - Bogura</span></a
+                    ><span class="text-xs lg:text-sm"
+                      >Dropping Point - Bogura</span
+                    ></a
                   >
                 </div>
                 <div>
                   <a class="btn px-6 py-2 bg-gray-200 rounded-md"
-                    ><span class="text-xs lg:text-sm">Est. Time - 11 Hour</span></a
+                    ><span class="text-xs lg:text-sm"
+                      >Est. Time - 11 Hour</span
+                    ></a
                   >
                 </div>
               </div>
             </div>
           </div>
-          <img class="h-40 lg:h-full" src="./images/info-devider.png" alt="info-divider" srcset="" />
+          <img
+            class="h-40 lg:h-full"
+            src="./images/info-devider.png"
+            alt="info-divider"
+            srcset=""
+          />
           <div
             class="ticket-price flex flex-col items-center justify-center space-y-3 pb-8"
           >
@@ -324,20 +359,20 @@
                   <i class="ri-steering-fill"></i>
                 </a>
               </div>
-              <div class="seats my-4 w-full space-y-3">
+              <div id="seats" class="my-4 w-full space-y-3">
                 <div class="first-row flex items-center justify-between">
                   <div class="left-row flex items-center gap-3">
                     <h4 class="text-xl opacity-70 w-10">A</h4>
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="A1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         A1
                       </button>
                       <button
                         id="A2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         A2
                       </button>
@@ -346,13 +381,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="A3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       A3
                     </button>
                     <button
                       id="A4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       A4
                     </button>
@@ -364,13 +399,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="B1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         B1
                       </button>
                       <button
                         id="B2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         B2
                       </button>
@@ -379,13 +414,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="B3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       B3
                     </button>
                     <button
                       id="B4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       B4
                     </button>
@@ -397,13 +432,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="C1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         C1
                       </button>
                       <button
                         id="C2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         C2
                       </button>
@@ -412,13 +447,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="C3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       C3
                     </button>
                     <button
                       id="C4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       C4
                     </button>
@@ -430,13 +465,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="D1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         D1
                       </button>
                       <button
                         id="D2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         D2
                       </button>
@@ -445,13 +480,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="D3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       D3
                     </button>
                     <button
                       id="D4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       D4
                     </button>
@@ -463,13 +498,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="E1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         E1
                       </button>
                       <button
                         id="E2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         E2
                       </button>
@@ -478,13 +513,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="E3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       E3
                     </button>
                     <button
                       id="E4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       E4
                     </button>
@@ -496,13 +531,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="F1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         F1
                       </button>
                       <button
                         id="F2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         F2
                       </button>
@@ -511,51 +546,19 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="F3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       F3
                     </button>
                     <button
                       id="F4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       F4
                     </button>
                   </div>
                 </div>
-                <div class="sixth-row flex items-center justify-between">
-                  <div class="left-row flex items-center gap-3">
-                    <h4 class="text-xl opacity-70 w-10">F</h4>
-                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
-                      <button
-                        id="F1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
-                      >
-                        F1
-                      </button>
-                      <button
-                        id="F2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
-                      >
-                        F2
-                      </button>
-                    </div>
-                  </div>
-                  <div class="right-side space-y-2 lg:space-y-0">
-                    <button
-                      id="F3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
-                    >
-                      F3
-                    </button>
-                    <button
-                      id="F4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
-                    >
-                      F4
-                    </button>
-                  </div>
-                </div>
+
 
                 <div class="seventh-row flex items-center justify-between">
                   <div class="left-row flex items-center gap-3">
@@ -563,13 +566,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="G1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         G1
                       </button>
                       <button
                         id="G2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         G2
                       </button>
@@ -578,13 +581,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="G3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       G3
                     </button>
                     <button
                       id="G4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       G4
                     </button>
@@ -597,13 +600,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="H1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         H1
                       </button>
                       <button
                         id="H2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         H2
                       </button>
@@ -612,13 +615,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="H3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       H3
                     </button>
                     <button
                       id="H4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       H4
                     </button>
@@ -631,13 +634,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="I1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         I1
                       </button>
                       <button
                         id="I2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         I2
                       </button>
@@ -646,13 +649,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="I3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       I3
                     </button>
                     <button
                       id="I4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       I4
                     </button>
@@ -665,13 +668,13 @@
                     <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
                       <button
                         id="J1"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         J1
                       </button>
                       <button
                         id="J2"
-                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                        class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                       >
                         J2
                       </button>
@@ -680,13 +683,13 @@
                   <div class="right-side space-y-2 lg:space-y-0">
                     <button
                       id="J3"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       J3
                     </button>
                     <button
                       id="J4"
-                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      class="seat w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
                     >
                       J4
                     </button>
@@ -702,16 +705,16 @@
             <div
               class="price-show-card bg-gray-200 p-3 rounded-lg space-y-10 h-auto py-20"
             >
-              <div class="price-details space-y-6 border-b-2 border-gray-300">
+              <div id="price-details" class="space-y-6 border-b-2 border-gray-300">
                 <div
                   class="price-headers flex items-center justify-between w-full border-b-2 border-dashed border-gray-400"
                 >
-                  <h3 class="text-sm font-bold text-left w-[60px]">Seat</h3>
+                  <h3 class="text-sm font-bold text-left w-[60px]">Seat <sup id="selected-seats" class="hidden">0</sup></h3>
                   <h3 class="text-sm font-bold text-left w-[60px]">Class</h3>
                   <h3 class="text-sm font-bold text-left w-[60px]">Price</h3>
                 </div>
-                <div
-                  class="actual-price flex items-center justify-between w-full"
+                <!-- <div
+                  class="actual-price flex items-center justify-between w-full hidden"
                 >
                   <h3
                     class="text-sm font-semibold text-left w-[60px] opacity-70"
@@ -728,14 +731,14 @@
                   >
                     550
                   </h3>
-                </div>
+                </div> -->
               </div>
               <div
                 class="total-price-details flex items-center justify-between w-full"
               >
                 <h3 class="text-sm font-bold text-left w-[60px]">Total</h3>
-                <h3 class="text-sm font-bold text-left w-[60px]">
-                  BDT <span>0</span>
+                <h3 class="text-sm font-bold text-left w-[80px]">
+                  BDT <span id="total">0</span>
                 </h3>
               </div>
 
@@ -753,8 +756,8 @@
                 class="grand-total-price-details flex items-center justify-between w-full"
               >
                 <h3 class="text-sm font-bold text-left">Grand Total</h3>
-                <h3 class="text-sm font-bold text-left w-[60px]">
-                  BDT <span>0</span>
+                <h3 class="text-sm font-bold text-left w-[80px]">
+                  BDT <span id="grand-total">0</span>
                 </h3>
               </div>
             </div>
@@ -825,13 +828,16 @@
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0 space-y-4">
             <a href="https://flowbite.com/" class="flex items-center gap-2">
-                <i class="fas fa-bus-alt scale-150 text-[#1DD100]"></i>
+              <i class="fas fa-bus-alt scale-150 text-[#1DD100]"></i>
               <span
                 class="self-center text-2xl font-semibold whitespace-nowrap text-white"
                 >Barsha Travel</span
               >
             </a>
-            <h3 class="text-base text-white opacity-90">It is a digital platform to make your daily <br> commuting better.</h3>
+            <h3 class="text-base text-white opacity-90">
+              It is a digital platform to make your daily <br />
+              commuting better.
+            </h3>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 hidden">
             <div>
@@ -894,42 +900,42 @@
           </div>
           <div class="download-section space-y-3">
             <h2 class="text-2xl text-white">Download our app</h2>
-            <img src="./images/playstore2.png" alt="">
+            <img src="./images/playstore2.png" alt="" />
           </div>
         </div>
         <hr
           class="my-6 border-gray-200 border-dashed sm:mx-auto dark:border-gray-700 lg:my-8"
         />
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-            > @all rights reserved, Barsha Travel services limited.2024
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            @all rights reserved, Barsha Travel services limited.2024
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="#"
               class="text-white hover:text-[#1DD100] dark:hover:text-white"
             >
-            Terms & condition
+              Terms & condition
             </a>
             <a
               href="#"
               class="text-white hover:text-[#1DD100] dark:hover:text-white ms-5"
             >
-            Return & refund policy
+              Return & refund policy
             </a>
             <a
               href="#"
               class="text-white hover:text-[#1DD100] dark:hover:text-white ms-5"
             >
-            Privacy policy
+              Privacy policy
             </a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="./js/utility.js"></script>
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
