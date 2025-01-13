@@ -1,15 +1,935 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart-Ticketing</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8609bb128c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="font-raleway m-0">
+    <header class="w-[90vw] mx-auto">
+      <nav
+        class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 dark:border-gray-600"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <i class="fas fa-bus scale-125 text-[#1DD100]"></i>
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Barsha Travel</span
+            >
+          </a>
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <button
+              type="button"
+              class="text-[#1DD100] bg-[#1DD1004D] border-2 border-[#1DD100] hover:bg-[#1DD100] hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Get started <i class="fas fa-bus-alt"></i>
+            </button>
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-Black bg-[#1DD100] rounded md:bg-transparent text-[#1DD100] md:p-0 dark:text-[#1DD100]"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#1DD100] md:p-0 dark:hover:text-[#1DD100] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#1DD100] md:p-0 dark:hover:text-[#1DD100] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#1DD100] md:p-0 dark:hover:text-[#1DD100] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="banner h-auto w-[90vw] lg:w-[80vw] mx-auto flex items-center justify-center flex-col gap-4 mb-20 bg-[url('./images/banner.png')] bg-center lg:bg-bottom bg-cover bg-no-repeat p-6 py-10 rounded-3xl"
+      >
+        <div class="banner-details text-center space-y-6">
+          <h3 class="text-2xl lg:text-5xl text-white font-bold">
+            End-to-End Travel with <br />
+            <span class="text-[#1DD100]">Barsha Bus</span>
+          </h3>
+          <h5 class="text-sm lg:text-base opacity-90 text-white">
+            Reliable and comfortable bus services to get you where you need to
+            go,<br class="hidden lg:block"/>
+            on time, every time.
+          </h5>
+          <div>
+            <a
+              class="btn text-balck font-semibold bg-[#1DD100] px-6 py-2 rounded-lg uppercase border-transparent border-2 hover:border-[#1DD100] hover:bg-white hover:text-[#1DD100]"
+            >
+              Buy Tickets
+            </a>
+          </div>
+        </div>
+        <div
+          class="details-cards flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-3 lg:space-y-0 lg:relative lg:translate-y-28 font-inter"
+        >
+          <div
+            class="card w-80 h-36 bg-white rounded-xl flex items-center justify-center space-x-6 shadow-md border-b-2 border-b-[#1DD100]"
+          >
+            <img src="./images/people.png" class="w-16 h-16" alt="people" />
+            <div class="card-details">
+              <h2 class="text-2xl font-semibold">500K+</h2>
+              <p class="text-sm opacity-80">Registered users</p>
+            </div>
+          </div>
+          <div
+            class="card w-80 h-36 bg-white rounded-xl flex items-center justify-center space-x-6 shadow-md border-b-2 border-b-[#1DD100]"
+          >
+            <img
+              src="./images/ticket-cupon.png"
+              class="w-16 h-16"
+              alt="people"
+            />
+            <div class="card-details">
+              <h2 class="text-2xl font-semibold">1.7lacks</h2>
+              <p class="text-sm opacity-80">Tickets sold</p>
+            </div>
+          </div>
+          <div
+            class="card w-80 h-36 bg-white rounded-xl flex items-center justify-center space-x-6 shadow-md border-b-2 border-b-[#1DD100]"
+          >
+            <img src="./images/stoppage.png" class="w-16 h-16" alt="people" />
+            <div class="card-details">
+              <h2 class="text-2xl font-semibold">80K+</h2>
+              <p class="text-sm opacity-80">Rental partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mt-10 lg:mt-20">
+      <section class="w-[90vw] lg:w-[80vw] mx-auto my-20 lg:mt-40 space-y-10">
+        <h2 class="text-xl lg:text-3xl text-center font-bold">Best offers for you</h2>
+        <div class="offer-cards grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div
+            class="offer-card flex items-center justify-evenly bg-[#FFBF0F] rounded-xl"
+          >
+            <div class="offer-details">
+              <h3 class="text-2xl font-bold">15% OFF</h3>
+              <h5 class="text-base font-bold">on your next purchase</h5>
+              <p class="text-sm opacity-80">use by January 2024</p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="" srcset="" />
+            <div class="coupon bg-[#FFBF0F]">
+              <h3 class="text-2xl font-bold">NEW15</h3>
+              <p class="text-sm opacity-80">Coupon Code</p>
+            </div>
+          </div>
+          <div
+            class="offer-card flex items-center justify-evenly bg-[#F78C9C] rounded-xl"
+          >
+            <div class="offer-details">
+              <h3 class="text-2xl font-bold">15% OFF</h3>
+              <h5 class="text-base font-bold">on your next purchase</h5>
+              <p class="text-sm opacity-80">use by January 2024</p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="" srcset="" />
+            <div class="coupon bg-[#F78C9C]">
+              <h3 class="text-2xl font-bold">NEW15</h3>
+              <p class="text-sm opacity-80">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a
+            class="btn text-[#1DD100] rounded-lg border border-[#1DD100] text-center px-6 py-2 hover:bg-[#1DD100] hover:text-white duration-500"
+            >See All Offers</a
+          >
+        </div>
+      </section>
+      <section
+        class="w-full bg-[#F7F8F8] rounded-t-3xl h-auto pt-20 border-t-2 border-t-[#1DD100] hover:border-t-blue-500"
+      >
+        <div class="ticket-header text-center space-y-4">
+          <h3 class="text-xl lg:text-4xl font-bold">Barsha Travel</h3>
+          <h5 class="text-base opacity-70">
+            Explore convenient routes and affordable fares with our top-rated
+            bus service, <br class="hidden lg:block"/>
+            connecting you to your destinations effortlessly.
+          </h5>
+        </div>
+        <div
+          class="ticket-card w-[90vw] lg:w-[80vw] mx-auto flex flex-col lg:flex-row items-center justify-evenly bg-white rounded-xl"
+        >
+          <div class="ticket-details w-full lg:w-[70%]">
+            <div
+              class="ticket-details-header flex items-center justify-between"
+            >
+              <div
+                class="ticket-header-one flex items-center justify-center space-x-4"
+              >
+                <img class="w-10" src="./images/bus-logo.png" alt="bus-logo" srcset="" />
+                <div class="logo-details space-y-3">
+                  <h4 class="text-xl lg:text-3xl font-bold">Greenline Paribahan</h4>
+                  <h5 class="text-sm lg:text-base opacity-70">
+                    Coach-009-WEB ! AC_Business
+                  </h5>
+                </div>
+              </div>
+              <div>
+                <a
+                  class="btn text-[#1DD100] bg-[#1DD10026] border border-[#1DD100] py-2 px-4 flex items-center rounded-md"
+                  ><img class="w-4 lg:w-8" src="./images/seat-green.png" alt="" srcset="" /> 40
+                  Seats left</a
+                >
+              </div>
+            </div>
+            <div class="ticket-infos bg-[#F7F8F8] p-6 lg:p-14 space-y-4 rounded-2xl">
+              <div
+                class="route flex items-center justify-between border-b-2 border-dashed py-2"
+              >
+                <h5 class="text-base font-semibold opacity-80">Route</h5>
+                <h5 class="text-base font-semibold">Dhaka-Sylhet</h5>
+              </div>
+              <div
+                class="departure flex items-center justify-between border-b-2 border-dashed py-2"
+              >
+                <h5 class="text-base font-semibold opacity-80">
+                  Departure Time
+                </h5>
+                <h5 class="text-base font-semibold">9:00 PM</h5>
+              </div>
+              <div class="destinations flex items-center justify-between">
+                <div>
+                  <a class="btn lg:px-6 py-2 bg-gray-200 rounded-md"
+                    ><span class="text-xs lg:text-sm">Boarding Point - Laxmipur</span></a
+                  >
+                </div>
+                <div>
+                  <a class="btn px-6 py-2 bg-gray-200 rounded-md"
+                    ><span class="text-xs lg:text-sm">Dropping Point - Bogura</span></a
+                  >
+                </div>
+                <div>
+                  <a class="btn px-6 py-2 bg-gray-200 rounded-md"
+                    ><span class="text-xs lg:text-sm">Est. Time - 11 Hour</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <img class="h-40 lg:h-full" src="./images/info-devider.png" alt="info-divider" srcset="" />
+          <div
+            class="ticket-price flex flex-col items-center justify-center space-y-3 pb-8"
+          >
+            <img src="./images/fare.png" alt="" srcset="" />
+            <h3 class="text-2xl font-bold font-raleway italic">550 Taka</h3>
+            <p class="text-sm opacity-80 font-semibold">Per Seat</p>
+          </div>
+        </div>
+        <div
+          class="w-[90vw] lg:w-[80vw] mx-auto mt-3 rounded-xl bg-white grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 px-10 py-10"
+        >
+          <div class="seat-details lg:border-r-2 lg:border-dashed lg:pr-2">
+            <h3 class="text-xl font-semibold border-b-2 border-dashed py-3">
+              Select Your Seat
+            </h3>
+            <div
+              class="availability flex items-center justify-between border-b-2 border-dashed py-3"
+            >
+              <div class="available-seats flex items-center">
+                <img src="./images/seat-gray.png" alt="seat-gray" />
+                <h5 class="text-base opacity-70">Available</h5>
+              </div>
+              <div class="available-seats flex items-center">
+                <img src="./images/seat-green-filled.png" alt="seat-filled" />
+                <h5 class="text-base text-[#1DD100]">Selected</h5>
+              </div>
+            </div>
+            <div class="seat-section mt-5">
+              <div class="text-right">
+                <a class="btn px-8 py-3 bg-gray-200">
+                  <i class="ri-steering-fill"></i>
+                </a>
+              </div>
+              <div class="seats my-4 w-full space-y-3">
+                <div class="first-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">A</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="A1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        A1
+                      </button>
+                      <button
+                        id="A2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        A2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="A3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      A3
+                    </button>
+                    <button
+                      id="A4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      A4
+                    </button>
+                  </div>
+                </div>
+                <div class="second-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">B</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="B1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        B1
+                      </button>
+                      <button
+                        id="B2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        B2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="B3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      B3
+                    </button>
+                    <button
+                      id="B4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      B4
+                    </button>
+                  </div>
+                </div>
+                <div class="third-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">C</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="C1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        C1
+                      </button>
+                      <button
+                        id="C2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        C2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="C3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      C3
+                    </button>
+                    <button
+                      id="C4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      C4
+                    </button>
+                  </div>
+                </div>
+                <div class="fourth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">D</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="D1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        D1
+                      </button>
+                      <button
+                        id="D2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        D2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="D3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      D3
+                    </button>
+                    <button
+                      id="D4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      D4
+                    </button>
+                  </div>
+                </div>
+                <div class="fifth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">E</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="E1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        E1
+                      </button>
+                      <button
+                        id="E2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        E2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="E3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      E3
+                    </button>
+                    <button
+                      id="E4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      E4
+                    </button>
+                  </div>
+                </div>
+                <div class="sixth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">F</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="F1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        F1
+                      </button>
+                      <button
+                        id="F2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        F2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="F3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      F3
+                    </button>
+                    <button
+                      id="F4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      F4
+                    </button>
+                  </div>
+                </div>
+                <div class="sixth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">F</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="F1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        F1
+                      </button>
+                      <button
+                        id="F2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        F2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="F3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      F3
+                    </button>
+                    <button
+                      id="F4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      F4
+                    </button>
+                  </div>
+                </div>
+
+                <div class="seventh-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">G</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="G1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        G1
+                      </button>
+                      <button
+                        id="G2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        G2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="G3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      G3
+                    </button>
+                    <button
+                      id="G4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      G4
+                    </button>
+                  </div>
+                </div>
+
+                <div class="eighth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">H</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="H1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        H1
+                      </button>
+                      <button
+                        id="H2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        H2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="H3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      H3
+                    </button>
+                    <button
+                      id="H4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      H4
+                    </button>
+                  </div>
+                </div>
+
+                <div class="ninth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">I</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="I1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        I1
+                      </button>
+                      <button
+                        id="I2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        I2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="I3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      I3
+                    </button>
+                    <button
+                      id="I4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      I4
+                    </button>
+                  </div>
+                </div>
+
+                <div class="tenth-row flex items-center justify-between">
+                  <div class="left-row flex items-center gap-3">
+                    <h4 class="text-xl opacity-70 w-10">J</h4>
+                    <div class="left-side lg:space-x-2 space-y-2 lg:space-y-0">
+                      <button
+                        id="J1"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        J1
+                      </button>
+                      <button
+                        id="J2"
+                        class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                      >
+                        J2
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right-side space-y-2 lg:space-y-0">
+                    <button
+                      id="J3"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      J3
+                    </button>
+                    <button
+                      id="J4"
+                      class="seat btn w-40 h-16 bg-gray-100 opacity-70 rounded-xl"
+                    >
+                      J4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="seat-price space-y-8">
+            <h3 class="text-xl font-semibold border-b-2 border-dashed py-3">
+              Select Your Seat
+            </h3>
+            <div
+              class="price-show-card bg-gray-200 p-3 rounded-lg space-y-10 h-auto py-20"
+            >
+              <div class="price-details space-y-6 border-b-2 border-gray-300">
+                <div
+                  class="price-headers flex items-center justify-between w-full border-b-2 border-dashed border-gray-400"
+                >
+                  <h3 class="text-sm font-bold text-left w-[60px]">Seat</h3>
+                  <h3 class="text-sm font-bold text-left w-[60px]">Class</h3>
+                  <h3 class="text-sm font-bold text-left w-[60px]">Price</h3>
+                </div>
+                <div
+                  class="actual-price flex items-center justify-between w-full"
+                >
+                  <h3
+                    class="text-sm font-semibold text-left w-[60px] opacity-70"
+                  >
+                    C2
+                  </h3>
+                  <h3
+                    class="text-sm font-semibold text-left w-[60px] opacity-70"
+                  >
+                    Premium
+                  </h3>
+                  <h3
+                    class="text-sm font-semibold text-left w-[60px] opacity-70"
+                  >
+                    550
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="total-price-details flex items-center justify-between w-full"
+              >
+                <h3 class="text-sm font-bold text-left w-[60px]">Total</h3>
+                <h3 class="text-sm font-bold text-left w-[60px]">
+                  BDT <span>0</span>
+                </h3>
+              </div>
+
+              <div class="coupon-field flex bg-white rounded-md">
+                <input
+                  type="text"
+                  placeholder="Coupon"
+                  class="rounded-md input border-none w-full max-w-xs hover:outline-none"
+                />
+                <a class="btn text-white bg-[#1DD100] px-4 py-2 rounded-md"
+                  >Apply</a
+                >
+              </div>
+              <div
+                class="grand-total-price-details flex items-center justify-between w-full"
+              >
+                <h3 class="text-sm font-bold text-left">Grand Total</h3>
+                <h3 class="text-sm font-bold text-left w-[60px]">
+                  BDT <span>0</span>
+                </h3>
+              </div>
+            </div>
+
+            <form class="max-w-md mx-auto">
+              <div class="relative z-0 w-full mb-5 group">
+                <div>
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Passenger's Name*</label
+                  >
+                  <input
+                    type="text"
+                    id="first_name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <div>
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Phone Number*</label
+                  >
+                  <input
+                    type="number"
+                    id="first_name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter Your Number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <div>
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Email ID</label
+                  >
+                  <input
+                    type="email"
+                    id="first_name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn w-full text-white bg-[#1DD100] hover:text-[#1DD100] hover:bg-white border-2 hover:border-[#1DD100]"
+              >
+                Next
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#030712] dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0 space-y-4">
+            <a href="https://flowbite.com/" class="flex items-center gap-2">
+                <i class="fas fa-bus-alt scale-150 text-[#1DD100]"></i>
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+                >Barsha Travel</span
+              >
+            </a>
+            <h3 class="text-base text-white opacity-90">It is a digital platform to make your daily <br> commuting better.</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 hidden">
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Resources
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="https://flowbite.com/" class="hover:underline"
+                    >Flowbite</a
+                  >
+                </li>
+                <li>
+                  <a href="https://tailwindcss.com/" class="hover:underline"
+                    >Tailwind CSS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Follow us
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://github.com/themesberg/flowbite"
+                    class="hover:underline"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://discord.gg/4eeurUVvTy"
+                    class="hover:underline"
+                    >Discord</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Legal
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="download-section space-y-3">
+            <h2 class="text-2xl text-white">Download our app</h2>
+            <img src="./images/playstore2.png" alt="">
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 border-dashed sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            > @all rights reserved, Barsha Travel services limited.2024
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              class="text-white hover:text-[#1DD100] dark:hover:text-white"
+            >
+            Terms & condition
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-[#1DD100] dark:hover:text-white ms-5"
+            >
+            Return & refund policy
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-[#1DD100] dark:hover:text-white ms-5"
+            >
+            Privacy policy
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="./js/utility.js"></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
